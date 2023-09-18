@@ -1,0 +1,216 @@
+:root {
+    --main-radius: 20px;
+    --main-padding: 7px;
+  }
+  
+  /*Estilo geral para o site*/
+  body {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #EDEADE;
+  }
+  /*Estilo para o CSS aonde o grid se encontra*/
+  .container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1fr 1.2fr;
+    grid-template-areas:
+      "aside nav nav nav"
+      "aside main main main"
+      "content1 content2 content3 content4"
+      "footer footer footer footer";
+    grid-gap: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #000000;
+    text-align: center;
+  }
+  /*Estilo para a navegação do grid*/
+  nav {
+    background-color: #ff0011;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  main {
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  /*Seletor que modifica as imagens do grid*/
+  .op-main {
+    max-width: 100%;
+    border-radius: var(--main-radius);
+    height: 100%;
+    border: 1px solid black;
+  }
+  /*Seletor que modifica as áreas de conteúdo, aqui eu usei as imagens que estão lado a lado*/
+  .op-content {
+    max-width: 100%;
+    border-radius: var(--main-radius);
+    height: 100%;
+    border: 1px solid black;
+  }
+  /*Seletor que modifica a imagem no aside do grid*/
+  .op-aside {
+    border-radius: 10%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+  /*Modifica o aside inteiro do grid*/
+  aside {
+    background-color: #ff0011;
+    grid-area: aside;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  aside p {
+    text-align: justify;
+    padding: 0 20px;
+  }
+  /*Esse modifica os ícones que tem links dentro do aside*/
+  .icons {
+    padding-top: 0 15;
+    width: 55%;
+  }
+  .icons:hover{
+    padding-top: 0 15;
+    width: 55%;
+    cursor: pointer;
+  }
+  /*Seletor que deixa os ícones com links um do lado do outro, sem ele eles ficam disformes*/
+  .icon-medias {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+  }
+  
+  /* Estilos para a primeira área de conteúdo */
+  #content1, #content2, #content3 {
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+  }
+  #content1 {
+    grid-area: content1;
+  }
+  
+  /* Estilos para a segunda área de conteúdo */
+  #content2 {
+    grid-area: content2;
+  }
+  
+  /* Estilos para a terceira área de conteúdo */
+  #content3 {
+    grid-area: content3;
+  }
+  
+  /* Estilos para o rodapé */
+  footer {
+    background-color: #ff0011;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .first-column, .second-column, .third-column {
+    display: flex;
+    text-align: start;
+  }
+  
+  
+  ul {
+    list-style: none;
+    padding: 10px 20px;
+  }
+  
+  .third-column ul {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding-right: 50px;
+  }
+  
+  .row-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  
+  /* Estilos para o menu de navegação */
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+  }
+  
+  /* Estilos para o logo dentro do menu */
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px;
+    margin-right: auto;
+  }
+  
+  /* Estilos para os itens do menu */
+  .menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Define a margem esquerda para os itens da lista no menu */
+  .menu-items li {
+    margin-left: 15px;
+  }
+  
+  /* Remove a margem esquerda do primeiro item da lista no menu */
+  .menu-items li:first-child {
+    margin-left: 0;
+  }
+  
+  /* Estilos para os links dentro dos itens do menu */
+  .menu-items li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Estilos para a barra de pesquisa */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-left: auto;
+  }
+  
+  /* Define a margem direita para o campo de entrada na barra de pesquisa */
+  .search-bar input {
+    margin-right: 5px;
+  }
+  
+  /* Define o padding para o botão na barra de pesquisa */
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #f0ca3c;
+    border: none;
+    cursor: pointer;
+  }
